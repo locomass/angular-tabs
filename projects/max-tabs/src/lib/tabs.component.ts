@@ -8,6 +8,7 @@ import { TabComponent } from './tab/tab.component';
   styleUrls: ['./tabs.component.css']
 })
 export class TabsComponent implements OnInit, AfterContentInit {
+  public top = true;
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
   constructor() { }
 

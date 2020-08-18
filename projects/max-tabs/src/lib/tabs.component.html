@@ -1,8 +1,10 @@
 <div class="tabs">
-    <ul class="list">
-        <li *ngFor="let tab of tabs" (click)="headClick(tab)">
-            <button>{{tab.head}}</button>
-        </li>
-    </ul>
-    <ng-content></ng-content>
+    <div [class.flex-hori]="!top">
+        <ul class="list" [class.flex-vert]="!top">
+            <li *ngFor="let tab of tabs" (click)="headClick(tab)">
+                <button>{{tab.head}}</button>
+            </li>
+        </ul>
+        <ng-content></ng-content>
+    </div>
 </div>

@@ -4,3 +4,13 @@
     padding: 0;
     margin: 0;
 }
+
+.flex-vert {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-hori {
+    display: flex;
+    flex-direction: row;
+}
