@@ -1,10 +1,16 @@
 <div class="tabs">
     <div [class.flex-hori]="!top">
-        <ul class="list" [class.flex-vert]="!top">
-            <li *ngFor="let tab of tabs" (click)="headClick(tab)">
-                <button>{{tab.head}}</button>
-            </li>
-        </ul>
+        <div class="flex-hori">
+            <button *ngIf='scrollBars' id="leftArrow" (click)="scrollLeft()"><</button>
+            <div #container class="container">
+                <ul class="list" [class.flex-vert]="!top">
+                    <li *ngFor="let tab of tabs" (click)="headClick(tab)">
+                        <button>{{tab.head}}</button>
+                    </li>
+                </ul>
+            </div>
+            <button *ngIf='scrollBars' id="rightArrow" (click)="scrollRight()">></button>
+        </div>
         <ng-content></ng-content>
     </div>
 </div>

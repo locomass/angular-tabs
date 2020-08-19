@@ -1,4 +1,4 @@
-import { Component, OnInit, ContentChildren, QueryList, Input, AfterContentInit } from '@angular/core';
+import { Component, OnInit, ContentChildren, QueryList, Input, AfterContentInit, ViewChild, ElementRef } from '@angular/core';
 import { TabComponent } from './tab/tab.component';
 
 @Component({
@@ -9,7 +9,9 @@ import { TabComponent } from './tab/tab.component';
 })
 export class TabsComponent implements OnInit, AfterContentInit {
   public top = true;
+  @Input() scrollBars = false;
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
+  @ViewChild('container', {read: ElementRef}) container: ElementRef<any>;
   constructor() { }
 
   ngOnInit(): void {
@@ -27,5 +29,15 @@ export class TabsComponent implements OnInit, AfterContentInit {
       });
 
       selectedTab.active = true;
+  }
+
+  scrollLeft(): void {
+    this.container.nativeElement.scrollTo({ left: (this.container.nativeElement.scrollLeft - 50),
+      behavior: 'smooth' });
+  }
+
+  scrollRight(): void {
+    this.container.nativeElement.scrollTo({ left: (this.container.nativeElement.scrollLeft + 50),
+      behavior: 'smooth' });
   }
 }
