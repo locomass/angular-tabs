@@ -8,8 +8,10 @@ import { TabComponent } from './tab/tab.component';
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.css']
 })
-export class TabsComponent implements OnInit, AfterContentInit, OnChanges {
-  @Input() top = true;
+export class TabsComponent implements OnInit, AfterContentInit {
+  // @Input() top = true;
+  @Input() activeHeaderTextColor: any;
+  @Input() headerTextColor: any;
   @Input() scrollBars = false;
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
   @ViewChild('container', {read: ElementRef}) container: ElementRef<any>;
@@ -25,10 +27,10 @@ export class TabsComponent implements OnInit, AfterContentInit, OnChanges {
       this.tabs.first.active = true;
     }
 
-    if (!this.top) {
-      this.textLeft = '^';
-      this.textRight = 'v';
-    }
+    // if (!this.top) {
+    //   this.textLeft = '^';
+    //   this.textRight = 'v';
+    // }
   }
 
   headClick(selectedTab: TabComponent): void {
@@ -58,19 +60,4 @@ export class TabsComponent implements OnInit, AfterContentInit, OnChanges {
         behavior: 'smooth' });
     }
   } */
-
-  ngOnChanges(changes: SimpleChanges): void {
-    for (const propName in changes) {
-      if (changes.hasOwnProperty(propName)) {
-        switch (propName) {
-          case 'top': {
-            if (!this.top) {
-              this.textLeft = '^';
-              this.textRight = 'v';
-            }
-          }
-        }
-      }
-    }
-  }
 }

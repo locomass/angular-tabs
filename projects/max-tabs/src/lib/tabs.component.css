@@ -1,3 +1,17 @@
+.tabs {
+    /* border: 1px solid #b7b7b7;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tab-content {
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, .08);
+}
+
 .list {
     list-style: none;
     display: flex;
@@ -17,4 +31,35 @@
 
 .container {
     overflow: hidden;
+}
+
+.head-wrap {
+    height: 36px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.head-active {
+    color: #656565;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .08);
+    border-bottom: transparent;
+}
+
+.head {
+    padding: 0px 16px;
+}
+
+.head-text {
+    /* font-weight: 600; */
+}
+
+.active {
+    color: Red;
+}
+
+.border {
+    height: 2px;
+    background-color: red;
 }

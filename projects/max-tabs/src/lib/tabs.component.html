@@ -1,16 +1,26 @@
 <div class="tabs">
-    <div [class.flex-hori]="!top">
-        <div [class.flex-hori]="top">
+    <div>
+        <div>
             <!-- <button *ngIf='scrollBars' id="leftArrow" (click)="scrollLeft()">{{textLeft}}</button> -->
             <div #container class="container">
-                <ul class="list" [class.flex-vert]="!top">
+                <ul class="list">
                     <li *ngFor="let tab of tabs" (click)="headClick(tab)">
-                        <button>{{tab.head}}</button>
+                        <div class="head-wrap" [class.head-active]="tab.active">
+                            <div class="head">
+                                <div class="head-text">
+                                    <span *ngIf="tab.active" [style.color]="activeHeaderTextColor"> {{tab.head}}</span>
+                                    <span *ngIf="!tab.active" [style.color]="headerTextColor"> {{tab.head}}</span>
+                                </div>
+                                <!-- <div *ngIf="tab.active" class="border"></div> -->
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
             <!-- <button *ngIf='scrollBars' id="rightArrow" (click)="scrollRight()">{{textRight}}</button> -->
         </div>
-        <ng-content></ng-content>
+        <div class="tab-content">
+            <ng-content></ng-content>
+        </div>
     </div>
 </div>
