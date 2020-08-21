@@ -1,7 +1,7 @@
 <div class="tabs">
     <div [class.flex-hori]="!top">
-        <div class="flex-hori">
-            <button *ngIf='scrollBars' id="leftArrow" (click)="scrollLeft()"><</button>
+        <div [class.flex-hori]="top">
+            <button *ngIf='scrollBars' id="leftArrow" (click)="scrollLeft()">{{textLeft}}</button>
             <div #container class="container">
                 <ul class="list" [class.flex-vert]="!top">
                     <li *ngFor="let tab of tabs" (click)="headClick(tab)">
@@ -9,7 +9,7 @@
                     </li>
                 </ul>
             </div>
-            <button *ngIf='scrollBars' id="rightArrow" (click)="scrollRight()">></button>
+            <button *ngIf='scrollBars' id="rightArrow" (click)="scrollRight()">{{textRight}}</button>
         </div>
         <ng-content></ng-content>
     </div>

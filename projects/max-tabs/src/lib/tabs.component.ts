@@ -1,4 +1,5 @@
-import { Component, OnInit, ContentChildren, QueryList, Input, AfterContentInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ContentChildren, QueryList, Input,
+  AfterContentInit, ViewChild, ElementRef, SimpleChanges, OnChanges } from '@angular/core';
 import { TabComponent } from './tab/tab.component';
 
 @Component({
@@ -7,11 +8,13 @@ import { TabComponent } from './tab/tab.component';
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.css']
 })
-export class TabsComponent implements OnInit, AfterContentInit {
-  public top = true;
+export class TabsComponent implements OnInit, AfterContentInit, OnChanges {
+  @Input() top = true;
   @Input() scrollBars = false;
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
   @ViewChild('container', {read: ElementRef}) container: ElementRef<any>;
+  textLeft = '<';
+  textRight = '>';
   constructor() { }
 
   ngOnInit(): void {
@@ -20,6 +23,11 @@ export class TabsComponent implements OnInit, AfterContentInit {
   ngAfterContentInit(): void {
     if (this.tabs.length > 0) {
       this.tabs.first.active = true;
+    }
+
+    if (!this.top) {
+      this.textLeft = '^';
+      this.textRight = 'v';
     }
   }
 
@@ -32,12 +40,37 @@ export class TabsComponent implements OnInit, AfterContentInit {
   }
 
   scrollLeft(): void {
-    this.container.nativeElement.scrollTo({ left: (this.container.nativeElement.scrollLeft - 50),
-      behavior: 'smooth' });
+    if (this.top) {
+      this.container.nativeElement.scrollTo({ left: (this.container.nativeElement.scrollLeft - 50),
+        behavior: 'smooth' });
+    } else {
+      this.container.nativeElement.scrollTo({ top: (this.container.nativeElement.scrollTop - 50),
+        behavior: 'smooth' });
+    }
   }
 
   scrollRight(): void {
-    this.container.nativeElement.scrollTo({ left: (this.container.nativeElement.scrollLeft + 50),
-      behavior: 'smooth' });
+    if (this.top) {
+      this.container.nativeElement.scrollTo({ left: (this.container.nativeElement.scrollLeft + 50),
+        behavior: 'smooth' });
+    } else {
+      this.container.nativeElement.scrollTo({ top: (this.container.nativeElement.scrollTop + 50),
+        behavior: 'smooth' });
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    for (const propName in changes) {
+      if (changes.hasOwnProperty(propName)) {
+        switch (propName) {
+          case 'top': {
+            if (!this.top) {
+              this.textLeft = '^';
+              this.textRight = 'v';
+            }
+          }
+        }
+      }
+    }
   }
 }
