@@ -39,7 +39,7 @@ export class TabsComponent implements OnInit, AfterContentInit, OnChanges {
       selectedTab.active = true;
   }
 
-  scrollLeft(): void {
+  /* scrollLeft(): void {
     if (this.top) {
       this.container.nativeElement.scrollTo({ left: (this.container.nativeElement.scrollLeft - 50),
         behavior: 'smooth' });
@@ -57,7 +57,7 @@ export class TabsComponent implements OnInit, AfterContentInit, OnChanges {
       this.container.nativeElement.scrollTo({ top: (this.container.nativeElement.scrollTop + 50),
         behavior: 'smooth' });
     }
-  }
+  } */
 
   ngOnChanges(changes: SimpleChanges): void {
     for (const propName in changes) {
