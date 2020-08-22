@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'max-tabs-test';
   @ViewChild('tabs') tabsComponent: TabsComponent;
 
-  top(): void {
+  /* top(): void {
     if (this.tabsComponent) {
       this.tabsComponent.top = true;
     }
@@ -20,5 +20,5 @@ export class AppComponent {
     if (this.tabsComponent) {
       this.tabsComponent.top = false;
     }
-  }
+  } */
 }
