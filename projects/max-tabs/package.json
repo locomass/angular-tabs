@@ -1,11 +1,11 @@
 {
-    "name": "max-tabs",
+    "name": "@karthikeyen/max-tabs",
     "version": "1.0.0",
     "description": "A simple angular reusable tab control.",
     "author": "Karthik Krishna Baiju",
     "repository": {
-        "type": "",
-        "url": ""
+        "type": "git",
+        "url": "git://github.com/karthikeyen/angular-tabs.git"
     },
     "bugs": {
         "url": ""
