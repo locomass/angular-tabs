@@ -1,164 +1,162 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
-  "newProjectRoot": "projects",
-  "projects": {
-    "max-tabs": {
-      "projectType": "library",
-      "root": "projects/max-tabs",
-      "sourceRoot": "projects/max-tabs/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/max-tabs/tsconfig.lib.json",
-            "project": "projects/max-tabs/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/max-tabs/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/max-tabs/src/test.ts",
-            "tsConfig": "projects/max-tabs/tsconfig.spec.json",
-            "karmaConfig": "projects/max-tabs/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/max-tabs/tsconfig.lib.json",
-              "projects/max-tabs/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
-    "max-tabs-test": {
-      "projectType": "application",
-      "schematics": {},
-      "root": "projects/max-tabs-test",
-      "sourceRoot": "projects/max-tabs-test/src",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/max-tabs-test",
-            "index": "projects/max-tabs-test/src/index.html",
-            "main": "projects/max-tabs-test/src/main.ts",
-            "polyfills": "projects/max-tabs-test/src/polyfills.ts",
-            "tsConfig": "projects/max-tabs-test/tsconfig.app.json",
-            "aot": true,
-            "assets": [
-              "projects/max-tabs-test/src/favicon.ico",
-              "projects/max-tabs-test/src/assets"
-            ],
-            "styles": [
-              "projects/max-tabs-test/src/styles.css"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "projects/max-tabs-test/src/environments/environment.ts",
-                  "with": "projects/max-tabs-test/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+        "mass-tabs": {
+            "projectType": "library",
+            "root": "projects/mass-tabs",
+            "sourceRoot": "projects/mass-tabs/src",
+            "prefix": "lib",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-ng-packagr:build",
+                    "options": {
+                        "tsConfig": "projects/mass-tabs/tsconfig.lib.json",
+                        "project": "projects/mass-tabs/ng-package.json"
+                    },
+                    "configurations": {
+                        "production": {
+                            "tsConfig": "projects/mass-tabs/tsconfig.lib.prod.json"
+                        }
+                    }
                 },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "main": "projects/mass-tabs/src/test.ts",
+                        "tsConfig": "projects/mass-tabs/tsconfig.spec.json",
+                        "karmaConfig": "projects/mass-tabs/karma.conf.js"
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "projects/mass-tabs/tsconfig.lib.json",
+                            "projects/mass-tabs/tsconfig.spec.json"
+                        ],
+                        "exclude": [
+                            "**/node_modules/**"
+                        ]
+                    }
                 }
-              ]
             }
-          }
         },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "max-tabs-test:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "max-tabs-test:build:production"
+        "mass-tabs-test": {
+            "projectType": "application",
+            "schematics": {},
+            "root": "projects/mass-tabs-test",
+            "sourceRoot": "projects/mass-tabs-test/src",
+            "prefix": "app",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "options": {
+                        "outputPath": "dist/mass-tabs-test",
+                        "index": "projects/mass-tabs-test/src/index.html",
+                        "main": "projects/mass-tabs-test/src/main.ts",
+                        "polyfills": "projects/mass-tabs-test/src/polyfills.ts",
+                        "tsConfig": "projects/mass-tabs-test/tsconfig.app.json",
+                        "aot": true,
+                        "assets": [
+                            "projects/mass-tabs-test/src/favicon.ico",
+                            "projects/mass-tabs-test/src/assets"
+                        ],
+                        "styles": [
+                            "projects/mass-tabs-test/src/styles.css"
+                        ],
+                        "scripts": []
+                    },
+                    "configurations": {
+                        "production": {
+                            "fileReplacements": [{
+                                "replace": "projects/mass-tabs-test/src/environments/environment.ts",
+                                "with": "projects/mass-tabs-test/src/environments/environment.prod.ts"
+                            }],
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "extractCss": true,
+                            "namedChunks": false,
+                            "extractLicenses": true,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "budgets": [{
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "6kb",
+                                    "maximumError": "10kb"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "options": {
+                        "browserTarget": "mass-tabs-test:build"
+                    },
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "mass-tabs-test:build:production"
+                        }
+                    }
+                },
+                "extract-i18n": {
+                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "options": {
+                        "browserTarget": "mass-tabs-test:build"
+                    }
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "main": "projects/mass-tabs-test/src/test.ts",
+                        "polyfills": "projects/mass-tabs-test/src/polyfills.ts",
+                        "tsConfig": "projects/mass-tabs-test/tsconfig.spec.json",
+                        "karmaConfig": "projects/mass-tabs-test/karma.conf.js",
+                        "assets": [
+                            "projects/mass-tabs-test/src/favicon.ico",
+                            "projects/mass-tabs-test/src/assets"
+                        ],
+                        "styles": [
+                            "projects/mass-tabs-test/src/styles.css"
+                        ],
+                        "scripts": []
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "projects/mass-tabs-test/tsconfig.app.json",
+                            "projects/mass-tabs-test/tsconfig.spec.json",
+                            "projects/mass-tabs-test/e2e/tsconfig.json"
+                        ],
+                        "exclude": [
+                            "**/node_modules/**"
+                        ]
+                    }
+                },
+                "e2e": {
+                    "builder": "@angular-devkit/build-angular:protractor",
+                    "options": {
+                        "protractorConfig": "projects/mass-tabs-test/e2e/protractor.conf.js",
+                        "devServerTarget": "mass-tabs-test:serve"
+                    },
+                    "configurations": {
+                        "production": {
+                            "devServerTarget": "mass-tabs-test:serve:production"
+                        }
+                    }
+                }
             }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "max-tabs-test:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/max-tabs-test/src/test.ts",
-            "polyfills": "projects/max-tabs-test/src/polyfills.ts",
-            "tsConfig": "projects/max-tabs-test/tsconfig.spec.json",
-            "karmaConfig": "projects/max-tabs-test/karma.conf.js",
-            "assets": [
-              "projects/max-tabs-test/src/favicon.ico",
-              "projects/max-tabs-test/src/assets"
-            ],
-            "styles": [
-              "projects/max-tabs-test/src/styles.css"
-            ],
-            "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/max-tabs-test/tsconfig.app.json",
-              "projects/max-tabs-test/tsconfig.spec.json",
-              "projects/max-tabs-test/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "projects/max-tabs-test/e2e/protractor.conf.js",
-            "devServerTarget": "max-tabs-test:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "max-tabs-test:serve:production"
-            }
-          }
         }
-      }
-    }},
-  "defaultProject": "max-tabs"
+    },
+    "defaultProject": "mass-tabs"
 }

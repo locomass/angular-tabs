@@ -1,7 +1,9 @@
 {
-    "name": "tab-project",
-    "version": "0.0.0",
-    "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+    "name": "angular-tab-project",
+    "version": "1.0.0",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
@@ -9,9 +11,9 @@
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "maxtabsbuild": "ng build max-tabs",
-        "maxtabsapplicationbuild": "ng build max-tabs-test",
-        "maxtabsapplicationrun": "ng build max-tabs-test --prod && ng serve"
+        "masstabsbuild": "ng build mass-tabs",
+        "masstabsapplicationbuild": "ng build mass-tabs-test",
+        "masstabsapplicationrun": "ng build mass-tabs-test --prod && ng serve"
     },
     "private": false,
     "dependencies": {

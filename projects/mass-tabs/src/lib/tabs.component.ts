@@ -4,7 +4,7 @@ import { TabComponent } from './tab/tab.component';
 
 @Component({
   // tslint:disable-next-line:component-selector
-  selector: 'max-tabs',
+  selector: 'mass-tabs',
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.css']
 })

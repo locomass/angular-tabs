@@ -4,4 +4,4 @@
 
 export * from './lib/tab/tab.component';
 export * from './lib/tabs.component';
-export * from './lib/max-tabs.module';
+export * from './lib/mass-tabs.module';

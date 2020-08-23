@@ -10,4 +10,4 @@ import { BrowserModule } from '@angular/platform-browser';
   ],
   exports: [TabsComponent, TabComponent]
 })
-export class MaxTabsModule { }
+export class MassTabsModule { }

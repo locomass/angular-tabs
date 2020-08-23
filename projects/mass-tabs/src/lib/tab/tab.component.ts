@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   // tslint:disable-next-line:component-selector
-  selector: 'max-tab',
+  selector: 'mass-tab',
   templateUrl: './tab.component.html',
   styleUrls: ['./tab.component.css']
 })

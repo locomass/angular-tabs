@@ -17,8 +17,8 @@
     ],
     "paths": {
       "max-tabs": [
-        "dist/max-tabs/max-tabs",
-        "dist/max-tabs"
+        "dist/mass-tabs/max-tabs",
+        "dist/mass-tabs"
       ]
     }
   }

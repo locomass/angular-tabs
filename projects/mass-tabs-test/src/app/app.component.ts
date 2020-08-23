@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { TabsComponent } from '../../../max-tabs/src/lib/tabs.component';
+import { TabsComponent } from '../../../mass-tabs/src/lib/tabs.component';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,7 @@ import { TabsComponent } from '../../../max-tabs/src/lib/tabs.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'max-tabs-test';
+  title = 'mass-tabs-test';
   @ViewChild('tabs') tabsComponent: TabsComponent;
 
   /* top(): void {

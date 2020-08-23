@@ -8,16 +8,16 @@
   "files": [],
   "references": [
     {
-      "path": "./projects/max-tabs/tsconfig.lib.json"
+      "path": "./projects/mass-tabs/tsconfig.lib.json"
     },
     {
-      "path": "./projects/max-tabs/tsconfig.spec.json"
+      "path": "./projects/mass-tabs/tsconfig.spec.json"
     },
     {
-      "path": "./projects/max-tabs-test/tsconfig.app.json"
+      "path": "./projects/mass-tabs-test/tsconfig.app.json"
     },
     {
-      "path": "./projects/max-tabs-test/tsconfig.spec.json"
+      "path": "./projects/mass-tabs-test/tsconfig.spec.json"
     }
 ]
 }
