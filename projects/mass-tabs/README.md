@@ -1,24 +1,21 @@
-# MaxTabs
+# Mass-Tabs
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.9.
 
-## Code scaffolding
+## Usage
+```html
+<mass-tabs activeHeaderTextColor='#ff6358' headerTextColor='#656565'>
+        <mass-tab head="First" active="true">
+            First wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</mass-tab>
+        <mass-tab head="Second">
+            Second wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
+        </mass-tab>
+        <mass-tab head="Third">
+            Welcome to mass Tabs 😎😎
+        </mass-tab>
+    </mass-tabs>
+```
 
-Run `ng generate component component-name --project max-tabs` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project max-tabs`.
-> Note: Don't forget to add `--project max-tabs` or else it will be added to the default project in your `angular.json` file. 
-
-## Build
-
-Run `ng build max-tabs` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build max-tabs`, go to the dist folder `cd dist/max-tabs` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test max-tabs` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
+## Documentation
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
