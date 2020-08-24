@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { TabsComponent } from '../../../mass-tabs/src/lib/tabs.component';
+import { TabsComponent } from '@locomass/mass-tabs';
 
 @Component({
   selector: 'app-root',

@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MassTabsModule } from '../../../mass-tabs/src/lib/mass-tabs.module';
+import { TreeModule } from '@circlon/angular-tree-component';
+import { MassTabsModule } from '@locomass/mass-tabs';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { MassTabsModule } from '../../../mass-tabs/src/lib/mass-tabs.module';
   ],
   imports: [
     BrowserModule,
-    MassTabsModule
+    MassTabsModule,
+    TreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

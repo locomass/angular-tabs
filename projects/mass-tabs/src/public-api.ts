@@ -2,6 +2,6 @@
  * Public API Surface of max-tabs
  */
 
-export * from './lib/tab/tab.component';
-export * from './lib/tabs.component';
-export * from './lib/mass-tabs.module';
+export { TabComponent } from './lib/tab/tab.component';
+export { TabsComponent } from './lib/tabs.component';
+export { MassTabsModule } from './lib/mass-tabs.module';

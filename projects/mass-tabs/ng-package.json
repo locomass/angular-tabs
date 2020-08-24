@@ -1,7 +1,7 @@
 {
-  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/max-tabs",
-  "lib": {
-    "entryFile": "src/public-api.ts"
-  }
+    "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+    "dest": "../../dist/mass-tabs",
+    "lib": {
+        "entryFile": "src/public-api.ts"
+    }
 }

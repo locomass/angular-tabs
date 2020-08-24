@@ -11,7 +11,7 @@
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "masstabsbuild": "ng build mass-tabs",
+        "masstabsbuild": "ng build mass-tabs --prod",
         "masstabsapplicationbuild": "ng build mass-tabs-test",
         "masstabsapplicationrun": "ng build mass-tabs-test --prod && ng serve"
     },
@@ -25,6 +25,9 @@
         "@angular/platform-browser": "~10.0.9",
         "@angular/platform-browser-dynamic": "~10.0.9",
         "@angular/router": "~10.0.9",
+        "@circlon/angular-tree-component": "^10.0.0",
+        "@locomass/mass-tabs": "^1.0.2",
+        "lodash": "^4.17.20",
         "rxjs": "~6.5.5",
         "tslib": "^2.0.0",
         "zone.js": "~0.10.3"
