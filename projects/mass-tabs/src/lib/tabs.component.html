@@ -5,11 +5,11 @@
             <div #container class="container">
                 <ul class="list">
                     <li *ngFor="let tab of tabs" (click)="headClick(tab)">
-                        <div class="head-wrap" [class.head-active]="tab.active">
+                        <div class="head-wrap" [class.head-active]="active(tab)" [class.disabled]="tab.disabled">
                             <div class="head">
                                 <div class="head-text">
-                                    <span *ngIf="tab.active" [style.color]="activeHeaderTextColor"> {{tab.head}}</span>
-                                    <span *ngIf="!tab.active" [style.color]="headerTextColor"> {{tab.head}}</span>
+                                    <span *ngIf="active(tab)" [style.color]="activeHeaderTextColor"> {{tab.head}}</span>
+                                    <span *ngIf="!active(tab)" [style.color]="headerTextColor"> {{tab.head}}</span>
                                 </div>
                                 <!-- <div *ngIf="tab.active" class="border"></div> -->
                             </div>

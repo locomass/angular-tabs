@@ -1,5 +1,7 @@
-import { Component, OnInit, ContentChildren, QueryList, Input,
-  AfterContentInit, ViewChild, ElementRef, SimpleChanges, OnChanges } from '@angular/core';
+import {
+  Component, OnInit, ContentChildren, QueryList, Input,
+  AfterContentInit, ViewChild, ElementRef, SimpleChanges, OnChanges
+} from '@angular/core';
 import { TabComponent } from './tab/tab.component';
 
 @Component({
@@ -14,7 +16,7 @@ export class TabsComponent implements OnInit, AfterContentInit {
   @Input() headerTextColor: any;
   @Input() scrollBars = false;
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
-  @ViewChild('container', {read: ElementRef}) container: ElementRef<any>;
+  @ViewChild('container', { read: ElementRef }) container: ElementRef<any>;
   textLeft = '<';
   textRight = '>';
   constructor() { }
@@ -24,7 +26,8 @@ export class TabsComponent implements OnInit, AfterContentInit {
 
   ngAfterContentInit(): void {
     if (this.tabs.length > 0) {
-      this.tabs.first.active = true;
+      const first = this.tabs.toArray()[this.findFirstEnabled()];
+      first.active = true;
     }
 
     // if (!this.top) {
@@ -33,12 +36,37 @@ export class TabsComponent implements OnInit, AfterContentInit {
     // }
   }
 
-  headClick(selectedTab: TabComponent): void {
-      this.tabs.forEach((tab: TabComponent) => {
-        tab.active = false;
-      });
+  findFirstEnabled(): number {
+    let activeIndex = 0;
+    for (const tab of this.tabs) {
+      if (activeIndex === 0 && !tab.disabled && tab.active) {
+        break;
+      }
+      if (tab.disabled) {
+        activeIndex++;
+      }
+      if (!tab.disabled) {
+        break;
+      }
+    }
+    return activeIndex;
+  }
 
-      selectedTab.active = true;
+  active(currentTab: TabComponent): boolean {
+    if (currentTab.disabled) { return false; }
+    return currentTab.active;
+  }
+
+  headClick(selectedTab: TabComponent): void {
+    if (selectedTab.disabled) {
+      return;
+    }
+
+    this.tabs.forEach((tab: TabComponent) => {
+      tab.active = false;
+    });
+
+    selectedTab.active = true;
   }
 
   /* scrollLeft(): void {

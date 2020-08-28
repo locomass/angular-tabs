@@ -1,3 +1,3 @@
-<div class="tab" [hidden]="!active">
+<div class="tab" [hidden]="!active" [attr.disabled]="disabled ? '' : null">
     <ng-content></ng-content>
 </div>

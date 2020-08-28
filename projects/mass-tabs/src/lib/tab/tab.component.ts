@@ -8,9 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TabComponent implements OnInit {
   @Input() head: string;
-  active = false;
+  @Input() active = false;
+  @Input() disabled = false;
   constructor() { }
-
   ngOnInit(): void {
   }
 }
