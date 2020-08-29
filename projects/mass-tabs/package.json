@@ -1,6 +1,6 @@
 {
     "name": "@locomass/mass-tabs",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A simple angular reusable tab control.",
     "author": "Karthik Krishna Baiju",
     "repository": {
