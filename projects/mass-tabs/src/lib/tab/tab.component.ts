@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./tab.component.css']
 })
 export class TabComponent implements OnInit {
-  @Input() head: string;
+  @Input() headText: string;
   @Input() active = false;
   @Input() disabled = false;
   constructor() { }

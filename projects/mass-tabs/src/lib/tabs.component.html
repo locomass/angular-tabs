@@ -8,8 +8,8 @@
                         <div class="head-wrap" [class.head-active]="active(tab)" [class.disabled]="tab.disabled">
                             <div class="head">
                                 <div class="head-text">
-                                    <span *ngIf="active(tab)" [style.color]="activeHeaderTextColor"> {{tab.head}}</span>
-                                    <span *ngIf="!active(tab)" [style.color]="headerTextColor"> {{tab.head}}</span>
+                                    <span *ngIf="active(tab)" [style.color]="activeHeaderTextColor"> {{tab.headText}}</span>
+                                    <span *ngIf="!active(tab)" [style.color]="headerTextColor"> {{tab.headText}}</span>
                                 </div>
                                 <!-- <div *ngIf="tab.active" class="border"></div> -->
                             </div>

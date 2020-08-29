@@ -47,12 +47,12 @@ export class AppModule { }
 ## Usage
 ```html
 <mass-tabs activeHeaderTextColor='#ff6358' headerTextColor='#656565'>
-      <mass-tab head="First" active="true">
+      <mass-tab headText="First" active="true">
           First wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</mass-tab>
-      <mass-tab head="Second">
+      <mass-tab headText="Second">
           Second wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
       </mass-tab>
-      <mass-tab head="Third">
+      <mass-tab headText="Third">
           Welcome to mass Tabs 😎😎
       </mass-tab>
 </mass-tabs>
