@@ -1,6 +1,6 @@
 import {
   Component, OnInit, ContentChildren, QueryList, Input,
-  AfterContentInit, ViewChild, ElementRef, SimpleChanges, OnChanges
+  AfterContentInit, ViewChild, ElementRef
 } from '@angular/core';
 import { TabComponent } from './tab/tab.component';
 
@@ -11,14 +11,10 @@ import { TabComponent } from './tab/tab.component';
   styleUrls: ['./tabs.component.css']
 })
 export class TabsComponent implements OnInit, AfterContentInit {
-  // @Input() top = true;
-  @Input() activeHeaderTextColor: any;
-  @Input() headerTextColor: any;
-  @Input() scrollBars = false;
+  @Input() activeHeaderTextColor = '#ff6358';
+  @Input() headerTextColor = '#656565';
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
   @ViewChild('container', { read: ElementRef }) container: ElementRef<any>;
-  textLeft = '<';
-  textRight = '>';
   constructor() { }
 
   ngOnInit(): void {
@@ -29,11 +25,6 @@ export class TabsComponent implements OnInit, AfterContentInit {
       const first = this.tabs.toArray()[this.findFirstEnabled()];
       first.active = true;
     }
-
-    // if (!this.top) {
-    //   this.textLeft = '^';
-    //   this.textRight = 'v';
-    // }
   }
 
   findFirstEnabled(): number {
