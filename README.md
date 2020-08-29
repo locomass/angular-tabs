@@ -60,4 +60,10 @@ export class AppModule { }
 
 ## Documentation
 
-coming soon...
+| Property | Component Name | Details
+| ------------- | ------------- | ------------- |
+| headText  | TabComponent  | tab header text  |
+| active  | TabComponent | determines wheather tab is active tab or not  |
+| disabled  | TabComponent  | determines a disabled tab  |
+| activeHeaderTextColor | TabsComponent |active headerText color |
+| headerTextColor | TabsComponent | headerText color |
