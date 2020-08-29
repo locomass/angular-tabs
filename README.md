@@ -10,13 +10,13 @@ See [Packages](https://github.com/locomass/angular-tabs/packages).
 Install from the command line:
 
 ```json
-npm install @locomass/mass-tabs@1.0.2
+npm install @locomass/mass-tabs@1.0.3
 ```
 
 Install via package.json:
 
 ```json
-"@locomass/mass-tabs": "1.0.2"
+"@locomass/mass-tabs": "1.0.3"
 ```
 Import MassTab Module in to your AppModule
 
