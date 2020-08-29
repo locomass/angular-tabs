@@ -1,6 +1,6 @@
 # Angular Reusable Tab Control
 
-[![Current Version](https://img.shields.io/badge/version-1.0.2-green.svg)](https://github.com/locomass/angular-tabs/packages/369089)
+[![Current Version](https://img.shields.io/badge/version-1.0.3-green.svg)](https://github.com/locomass/angular-tabs/packages/369089)
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.9. <br/>
 See [Packages](https://github.com/locomass/angular-tabs/packages).
