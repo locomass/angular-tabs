@@ -48,12 +48,13 @@ export class AppModule { }
 ```html
 <mass-tabs>
       <mass-tab headText="First" active="true">
-          First wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</mass-tab>
+          First tab content here.This is an active tab.
+      </mass-tab>
       <mass-tab headText="Second" [disabled]="true">
-          Second wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
+          This is a disabled tab, can not be seen.
       </mass-tab>
       <mass-tab headText="Third">
-          Welcome to mass Tabs 😎😎
+          Third tab content here.
       </mass-tab>
 </mass-tabs>
 ```
